@@ -1,15 +1,35 @@
-import CountBtn from '@/components/CountBtn';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
+
+import Card from './components/Card';
+import NavigationBar from './components/NavigationBar';
+
 
 function App() {
   return (
-    <main className="flex flex-col items-center justify-center h-screen">
-      <div className="flex flex-col items-center gap-y-4">
-          <Badge className='bg-green-600 hover:bg-green-700' >wa.ve</Badge>
-          <Input className='bg-slate-500 ring-2 ring-gray-400 hover:bg-slate-700 ' />
-        <CountBtn />
-      </div>
+    <main className=''>
+          <NavigationBar/>
+          <section className='flex h-96 w-full' >
+            <div className="  bg-[url('/assets/fundo.jpeg')] h-full w-full bg-cover bg-center">
+              <div className='flex justify-between flex-wrap'>
+              <p className='mt-20 p-10 text-4xl font-bold'>
+                Torne sua empresa ainda mais relevante com a nossa ajuda.
+              </p>
+              <img className= "mr-40 mt-10"src="/assets/phonewave.png" alt="" />
+              </div>
+            </div>
+          </section>
+          <section>
+            <div className='flex justify-evenly mt-40 mb-20'>
+            <div>
+              <Card image='/assets/mark.jpg' title='Marquinho zuk' text='Cara experiente na criaçao de zipzapson'/>
+            </div>
+            <div>
+              <Card image='/assets/mark.jpg' title='Marquinho zuk' text='Cara experiente na criaçao de zipzapson'/>
+            </div>
+            <div>
+              <Card image='/assets/mark.jpg' title='Marquinho zuk' text='Cara experiente na criaçao de zipzapson'/>
+            </div>
+            </div>
+          </section>
     </main>
   );
 }
